@@ -1,14 +1,17 @@
 # Site settings
 title: 焉哉乎也
 email: zy3861@163.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >
+  这个网站主要是用来记录我在学习过程中的一些总结，随着对某些技术的理解加深，这些文章的内容很可能会更新。
+  希望这些总结能对你也有所帮助，也希望你能够前来讨论，指点一二。
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://zlqy386.github.io/" # the base hostname & protocol for your site
 
 # Build settings
+timezone: Asia/Shanghai
 markdown: kramdown
+permalink: /posts/:title
+paginate: 5
+paginate_path: "/:num/"
 sass:
-    style: :compressed
+  style: :compressed
