@@ -95,7 +95,7 @@
     color: $grey-color;
 
     .wrapper {
-        font-size: 15px;
+        // font-size: 15px;
         text-align: center;
     }
 }
@@ -136,7 +136,7 @@
 }
 
 .page-heading {
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .post-list {
@@ -149,13 +149,13 @@
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    font-size: 0.875em;
     color: $grey-color;
 }
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 .icon {
@@ -177,12 +177,13 @@
 }
 
 .post-title {
-    font-size: 42px;
+    font-size: 2em;
     letter-spacing: -1px;
     line-height: 1;
+    font-weight: bold;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: 1.75em;
     }
 }
 
@@ -190,26 +191,26 @@
     margin-bottom: $spacing-unit;
 
     h2 {
-        font-size: 32px;
+        font-size: 2em;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 1.75em;
         }
     }
 
     h3 {
-        font-size: 26px;
+        font-size: 1.625em;
 
         @include media-query($on-laptop) {
-            font-size: 22px;
+            font-size: 1.375em;
         }
     }
 
     h4 {
-        font-size: 20px;
+        font-size: 1.25em;
 
         @include media-query($on-laptop) {
-            font-size: 18px;
+            font-size: 1.125em;
         }
     }
 }
