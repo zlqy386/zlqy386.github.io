@@ -7,7 +7,7 @@ permalink: /about
 
 ### 关于我
 
-你好，我是张杨，你可以叫我Yang。我目前在上海交通大学读研，专业是软件工程。我感兴趣的方向是Web前端，喜欢的语言是JavaScript和Python。
+你好，我是张杨，你可以叫我Yang。上海交通大学硕士毕业，目前在[美团点评](http://zhaopin.meituan.com/index#/about){:target="_blank"}做Web前端开发。喜欢的语言是JavaScript和Python。
 
 除了技术，我还喜欢足球和动画。平时经常踢球、看球，是德国队球迷；关注二次元，是偶像大师P。
 
@@ -27,4 +27,4 @@ permalink: /about
 
 之前的总结方案是用印象笔记，但一来依旧比较零碎，二来还是希望这些总结能对别人也有所帮助，同时也希望能够同别人讨论，得到些提点。
 
-计划接下来写一些关于Jekyll和Github Pages搭建博客的总结。
+<!--计划接下来写一些关于Jekyll和Github Pages搭建博客的总结。-->
