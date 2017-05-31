@@ -1,4 +1,34 @@
 /**
+ * Wrapper
+ */
+.wrapper {
+    box-sizing: border-box;
+    max-width: $content-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/**
  * Site header
  */
 .site-header {
@@ -135,9 +165,9 @@
     padding: $spacing-unit 0;
 }
 
-.page-heading {
-    font-size: 1.25em;
-}
+// .page-heading {
+//     font-size: 1.25em;
+// }
 
 .post-list {
     margin-left: 0;
@@ -148,10 +178,10 @@
     }
 }
 
-.post-meta {
-    font-size: 0.875em;
-    color: $grey-color;
-}
+// .post-meta {
+//     font-size: 0.875em;
+//     color: $grey-color;
+// }
 
 .post-link {
     display: block;
@@ -165,52 +195,10 @@
     opacity: .6;
 
     &:hover {
-    opacity: 1;
+        opacity: 1;
     }
 }
 
 /**
  * Posts
  */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 2em;
-    letter-spacing: -1px;
-    line-height: 1;
-    font-weight: bold;
-
-    @include media-query($on-laptop) {
-        font-size: 1.75em;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 2em;
-
-        @include media-query($on-laptop) {
-            font-size: 1.75em;
-        }
-    }
-
-    h3 {
-        font-size: 1.625em;
-
-        @include media-query($on-laptop) {
-            font-size: 1.375em;
-        }
-    }
-
-    h4 {
-        font-size: 1.25em;
-
-        @include media-query($on-laptop) {
-            font-size: 1.125em;
-        }
-    }
-}

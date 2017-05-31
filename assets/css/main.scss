@@ -2,6 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
+@import "{{ site.theme }}";
 
 // Our variables
 $base-font-family: Avenir,'Helvetica Neue','Hiragino Sans GB',STHeiti,'Microsoft Yahei','WenQuanYi Micro Hei',sans-serif;
@@ -25,7 +26,9 @@ $content-width:    1080px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
+body {
+    font-family: "Open Sans", Avenir, "Helvetica Neue", Helvetica, 'Hiragino Sans GB',STHeiti,'Microsoft Yahei','WenQuanYi Micro Hei', Arial, sans-serif;
+}
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
@@ -40,12 +43,8 @@ $on-laptop:        800px;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "normalize",
-        "base",
-        "layout",
-        "syntax-highlighting"
+        // "base",
+        "layout"
 ;
