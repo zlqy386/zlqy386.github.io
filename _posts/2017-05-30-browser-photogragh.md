@@ -2,6 +2,7 @@
 layout: post
 title:  浏览器中拍照、上传
 date:   2017-05-30
+lastUpdate: 2017-06-01
 tags:
 - camera
 - getUserMedia
@@ -13,9 +14,9 @@ tags:
 
 ## 方法概述
 
-- 通过[navigator.mediaDevices.getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia){:target="_blank"}方法获取摄像头媒体流，用[video标签](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video){:target="_blank"}展示
+- 通过[navigator.mediaDevices.getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia){:target="_blank"}方法获取摄像头媒体流，用`<video>`标签展示
 - 拍照时借助[canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API){:target="_blank"}中的[drawImage()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage){:target="_blank"}方法截取图片
-- 如需保存或上传，可使用[toDataURL()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL){:target="_blank"}方法获取图像
+- 保存或上传，可使用[toDataURL()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL){:target="_blank"}方法或[toBlob()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob){:target="_blank"}方法获取图片
 
 ## 获取媒体流
 
@@ -80,14 +81,33 @@ button.onclick = function() {
 
 ## 图片上传
 
-`canvas.toDataURL`方法返回的是一个[data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs){:target="_blank"}。
-那么最简单的上传方法是将这个字符串直接传给后台，后台选择直接使用还是做相应处理。
+canvas提供了`toDataURL()`和`toBlob()`两个方法来获取其内容。[^2]
 
-若后台并未提供data URI字符串的接口，那么就需要将base64编码的字符串转化成二进制数据，来上传图片。
+### toDataURL
 
-可以选择构造[File](https://developer.mozilla.org/en-US/docs/Web/API/File){:target="_blank"}或[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob){:target="_blank"}对象，通过[FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData){:target="_blank"}上传。而对于第三方SDK上传，通常也会提供`File`或`Blob`为参数的接口。
+该方法返回的是一个[data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs){:target="_blank"}。默认格式为`image/png`，质量为0.92。
 
-由于`File`或`Blob`都可由[ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer){:target="_blank"}构造，因此只需将data URI字符串转化为`ArrayBuffer`。`ArrayBuffer`有不同的数据格式视图，统称为[TypedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays){:target="_blank"}，下面的方法选择的是[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array){:target="_blank"}（无符号8位整数数组）。[^2]
+```javascript
+var dataURL = canvas.toDataURL();
+```
+
+### toBlob
+
+该方法需要在回调中获取Blob对象。
+
+```js
+canvas.toBlob(function(blob){...}, 'image/jpeg', 0.95); // JPEG at 95% quality
+```
+
+可以通过`toDataURL()`方法获取[Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob){:target="_blank"}对象，或构造[File](https://developer.mozilla.org/en-US/docs/Web/API/File){:target="_blank"}对象，通过[FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData){:target="_blank"}上传。对于第三方SDK上传，通常也会提供`File`或`Blob`为参数的接口。
+
+### dataURL与Blob的转换
+
+data URI是`base64`或`ASCII`编码过的数据[^3]。在本文所述需求的情景下，dataURL与Blob的转换本质上是[base64的编码与解码](https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)，用到的函数有[atob()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob){:target="_blank"}和[btoa()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa){:target="_blank"}。
+
+下面以dataURL转Blob为例：
+
+由于`File`或`Blob`都可由[ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer){:target="_blank"}构造，因此只需将data URI字符串转化为`ArrayBuffer`对象。`ArrayBuffer`有不同的数据格式视图，统称为[TypedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays){:target="_blank"}，下面的方法选择的是[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array){:target="_blank"}（无符号8位整数数组）。[^4]
 
 ```javascript
 function dataURItoArrayBuffer(dataURI) {
@@ -102,8 +122,9 @@ function dataURItoArrayBuffer(dataURI) {
 
 事实上，Node.js中的`Buffer`类即实现了`Uint8Array`的API，可以通过[Buffer.from()](https://nodejs.org/api/buffer.html#buffer_class_method_buffer_from_string_encoding){:target="_blank"}方法来构造。浏览器中也可通过引用[buffer](https://github.com/feross/buffer){:target="_blank"}实现对`Buffer`类的支持。
 
-
 ## 参考链接
 
 [^1]: [caniuse.com中getUserMedia的注解](http://caniuse.com/#feat=stream){:target="_blank"}
-[^2]: 关于JavaScript操作二进制数据的接口，建议阅读[这篇文章](http://javascript.ruanyifeng.com/stdlib/arraybuffer.html){:target="_blank"}
+[^2]: [canvas element](https://html.spec.whatwg.org/multipage/scripting.html#the-canvas-element){:target="_blank"}
+[^3]: [The "data" URL scheme](https://tools.ietf.org/html/rfc2397){:target="_blank"}
+[^4]: 关于JavaScript操作二进制数据的接口，建议阅读[这篇文章](http://javascript.ruanyifeng.com/stdlib/arraybuffer.html){:target="_blank"}
