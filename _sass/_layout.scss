@@ -178,10 +178,10 @@
     }
 }
 
-// .post-meta {
-//     font-size: 0.875em;
-//     color: $grey-color;
-// }
+.post-meta {
+    font-size: 0.875em;
+    color: $grey-color;
+}
 
 .post-link {
     display: block;
@@ -202,3 +202,33 @@
 /**
  * Posts
  */
+.post-header {
+    margin-bottom: $spacing-unit;
+
+
+    .post-title {
+        margin-bottom: 0;
+    }
+
+    .post-meta {
+        margin: 0;
+    }
+}
+
+ul.tag-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+        display: inline;
+        padding: .1em .3em;
+        font-size: 0.875em;
+        color: #567482;
+        background-color: #f3f6fa;
+        border: solid 1px #dce6f0;
+    }
+    li + li {
+        margin-left: 5px;
+    }
+}
