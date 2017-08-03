@@ -5,7 +5,7 @@ description: >
   张杨的个人网站，主要用来记录学习过程中的一些总结，Web前端相关。随着对某些技术的理解加深，这些文章的内容很可能会更新。
   希望这些总结能对你也有所帮助，也希望你能够前来讨论，指点一二。
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://zlqy386.github.io/" # the base hostname & protocol for your site
+url: "http://carlzhy.com" # the base hostname & protocol for your site
 
 # Build settings
 timezone: Asia/Shanghai
