@@ -2,6 +2,7 @@
 layout: post
 title:  网页学习——DJMAX RESPECT
 date:   2017-08-01
+lastUpdate: 2017-08-04
 tags:
 - 网页学习
 - DJMAX RESPECT
@@ -17,7 +18,7 @@ tags:
 
 查看引用的js，可以看到网站使用了[jQuery Scrollify](https://projects.lukehaas.me/scrollify/){:target="_blank"}这个滑动动画的库，[CreateJS](http://www.createjs.com/){:target="_blank"}，[Velocity.js](http://velocityjs.org/){:target="_blank"}这两个动画库，以及[Ease+ for Velocity.js](https://github.com/yuichiroharai/easeplus-velocity)，[jQuery easing](http://gsgd.co.uk/sandbox/jquery/easing/){:target="_blank"}这两个缓动(easing)库。[^1]
 
-其中，`Velocity.js`采用了和`jQuery`中[animate()](http://api.jquery.com/animate/){:target="_blank"}相同的API，在优化的同时还加入了循环、滚动、变换等效果。
+其中，`Velocity.js`采用了和`jQuery`中[animate()](http://api.jquery.com/animate/){:target="_blank"}相同的API，在性能优化的同时还加入了循环、滚动、变换等效果。
 
 `Ease+ for Velocity.js`借鉴`TweenJS(CreateJS)`，实现了`Velocity.js`未实现的*Back*, *Elastic*, *Bounce*这三个缓动效果。
 
@@ -79,7 +80,7 @@ tags:
         .lt(0,0);
 ```
 
-4. 斜线的动画有三段，前70个周期向左下移动，经过`particle.delay`个周期不动后，后70个周期向右下移动。
+4. 斜线的动画有两段，前70个周期向左下移动，经过`particle.delay`个周期不动后，后70个周期向右下移动。
 >
 ```javascript
     //進行度カウントが100まで = 全体を表示するのにかける時間
