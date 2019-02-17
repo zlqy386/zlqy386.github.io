@@ -11,7 +11,7 @@ tags:
 ---
 
 <hr>
-:disappointed:目前*(2019/02/18)*官网早已进行了更新，网站中不再有本文所重点介绍的背景特效了。目前引用的js主要是[home.js](http://www.arcsystemworks.jp/djmax_respect/js/home.js?ver=20)，引用的库没有变。原来的`teaser.js`备份在[这里](/assets/js/teaser.js)，下次会记得保存效果图的。
+:disappointed:目前*(2019/02/18)*官网早已进行了更新，网站中不再有本文所重点介绍的背景特效了。目前网站主页的逻辑主要是写在[home.js](http://www.arcsystemworks.jp/djmax_respect/js/home.js?ver=20)中，引用的库并没有变。我把原来的`teaser.js`备份在[这里](/assets/js/teaser.js)了，下次会记得保存效果图的。
 <hr>
 
 前不久*(2017/07/28)*，DJMAX RESPECT发售。查找资料时发现它在日本的[宣传网站](http://www.arcsystemworks.jp/djmax_respect/){:target="_blank"}看起来简单而酷炫，因此决定研究一下其效果是如何实现的。
