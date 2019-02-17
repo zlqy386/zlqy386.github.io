@@ -17,4 +17,5 @@ sass:
   style: :compressed
 theme: jekyll-theme-cayman
 plugins:
-   - jekyll-sitemap
+  - jekyll-sitemap
+  - jemoji
