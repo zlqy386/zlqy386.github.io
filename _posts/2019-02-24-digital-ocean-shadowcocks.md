@@ -174,7 +174,7 @@ sysctl net.ipv4.tcp_congestion_control
 ## 参考资料
 
 [^1]: 如果想要体验，可以用这个[链接](https://www.expressrefer.com/refer-friend?referrer_id=13691742&utm_campaign=referrals&utm_medium=copy_link&utm_source=referral_dashboard)注册账号，免费使用90天
-[^2]: 如果想使用Vultr或者Linode，也可以使用我的邀请码注册，分别是[Vultr](https://www.vultr.com/?ref=7899641-4F)和Linode。Linode还可以使用[教程](https://www.linode.com/docs/platform/billing-and-support/billing-and-payments/)中的促销码获得$10，目前（2019/02/24）促销码是DOCS10
+[^2]: 如果想使用Vultr或者Linode，也可以使用我的邀请码注册，分别是[Vultr](https://www.vultr.com/?ref=7899641-4F)和[Linode](https://www.linode.com/?r=78b5a5e9a4fb7ad71ac099ff14c15738ad6102fb)。Linode还可以使用[教程](https://www.linode.com/docs/platform/billing-and-support/billing-and-payments/)中的促销码获得$10，目前（2019/02/24）促销码是DOCS10
 [^3]: 更多命令行文档，请参考[shadowsocks-go](https://github.com/shadowsocks/shadowsocks-go#usage)
 [^4]: [Ubuntu 下 Shadowsocks 服务端的安装及优化](http://blog.drsanwujiang.com/2018/12/ubuntu%E4%B8%8Bshadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BC%98%E5%8C%96/)
 [^5]: [科学上网之 Shadowsocks 安装及优化加速](http://wuchong.me/blog/2015/02/02/shadowsocks-install-and-optimize/)
