@@ -2,7 +2,7 @@
 layout: post
 title:  使用 DigitalOcean 和 Shadowsocks 科学上网
 date:   2019-02-24
-lastUpdate: 2019-02-24
+lastUpdate: 2019-02-25
 tags:
 - DigitalOcean
 - Shadowsocks
@@ -22,6 +22,7 @@ tags:
 除了速度，这里列几个主要的区别：
 
 - Vultr支持国内的支付方式：支付宝、微信和银联
+- Linode必须要绑定信用卡才可使用
 - DigitalOcean没有日本的机器
 
 选择DigitalOcean主要是因为申请了[GitHub Student Developer Pack](https://education.github.com/pack)后可以赠送$50，对于学生来说很划算[^2]。
