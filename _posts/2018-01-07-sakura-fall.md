@@ -54,7 +54,7 @@ function addSakura() {
 }
 ```
 
-风有坐标和强度（rest），类似于光源，用于之后计算花瓣运动的位置。每当鼠标移动会在鼠标位置生成一个风口，加上[节流函数（throttle）](http://underscorejs.org/#throttle){:target="_blank"}会更好。
+风有坐标和强度（rest），类似于光源，用于之后计算花瓣运动的位置。每当鼠标移动会在鼠标位置生成一个风口，加上[节流函数（throttle）](https://underscorejs.org/#throttle){:target="_blank"}会更好。
 
 花瓣对象包含了位置、放缩（scale）、旋转角度（rotation）、速度（v）的相关信息。
 

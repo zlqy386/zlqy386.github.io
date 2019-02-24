@@ -124,7 +124,7 @@ function dataURItoArrayBuffer(dataURI) {
 
 ## 参考链接
 
-[^1]: [caniuse.com中getUserMedia的注解](http://caniuse.com/#feat=stream){:target="_blank"}
+[^1]: [caniuse.com中getUserMedia的注解](https://caniuse.com/#feat=stream){:target="_blank"}
 [^2]: [canvas element](https://html.spec.whatwg.org/multipage/scripting.html#the-canvas-element){:target="_blank"}
 [^3]: [The "data" URL scheme](https://tools.ietf.org/html/rfc2397){:target="_blank"}
-[^4]: 关于JavaScript操作二进制数据的接口，建议阅读[这篇文章](http://javascript.ruanyifeng.com/stdlib/arraybuffer.html){:target="_blank"}
+[^4]: 关于JavaScript操作二进制数据的接口，建议阅读[这篇文章](https://javascript.ruanyifeng.com/stdlib/arraybuffer.html){:target="_blank"}
