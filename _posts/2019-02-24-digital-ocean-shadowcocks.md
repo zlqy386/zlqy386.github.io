@@ -3,6 +3,7 @@ layout: post
 title:  使用 DigitalOcean 和 Shadowsocks 科学上网
 date:   2019-02-24
 lastUpdate: 2019-02-25
+published: false
 tags:
 - DigitalOcean
 - Shadowsocks
