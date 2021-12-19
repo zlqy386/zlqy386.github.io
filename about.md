@@ -7,9 +7,9 @@ permalink: /about
 
 ### 关于我
 
-你好，我是张杨，可以叫我Yang。上海交通大学硕士毕业，目前在[美团点评](http://zhaopin.meituan.com/index#/about){:target="_blank"}做Web前端开发。喜欢的语言是JavaScript和Python。平时会关注前端的一些趋势，也会根据业务诉求研究一些技术点。
+你好，我是张杨，可以叫我Yang。上海交通大学硕士毕业，目前在[美团](https://about.meituan.com/home){:target="_blank"}做Web前端开发。喜欢的语言是JavaScript和Python。平时会关注前端的一些趋势，也会根据业务诉求研究一些技术点。
 
-除了技术，我还喜欢足球和ACG（Anime、Comics、Games）。平时经常踢球、看球，是德国队球迷；关注二次元，是[偶像大师](http://idolmaster.jp/){:target="_blank"}P。
+除了技术，我还喜欢足球和ACG（Anime、Comics、Games）。平时经常踢球、看球，是德国队球迷；关注二次元，是[偶像大师](https://idolmaster-official.jp/){:target="_blank"}P。
 
 你也可以在以下社交网站找到我，通常我只会转发分享一些感兴趣的内容。
 
@@ -40,4 +40,4 @@ permalink: /about
 
 ### 其他
 
-团队长期招人，欢迎砸简历。[JD](https://zhaopin.meituan.com/job-detail?jobId=58403034){:target="_blank"}
+团队长期招人，欢迎邮件联系。
